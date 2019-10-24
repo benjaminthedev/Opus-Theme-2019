@@ -176,23 +176,21 @@ function endo_handling_fee() {
          return;
  
      $fee = 2.50;
-     $woocommerce->cart->add_fee( 'A handling fee of £2.50 is applied to each order', $fee, false, 'standard' );
+     $woocommerce->cart->add_fee( 'Handling Charge', $fee, false, 'standard' );
    
 }
 
-//add handling fee
-//add_action( 'woocommerce_cart_calculate_fees','endo_handling_fee' );
-//function endo_handling_fee() {
-     //global $woocommerce;
+add_action( 'woocommerce_cart_calculate_fees','endo_handling_fee_extra' );
+function endo_handling_fee_extra() {
+     global $woocommerce;
  
-     //if ( is_admin() && ! defined( 'DOING_AJAX' ) )
-       //   return;
+     if ( is_admin() && ! defined( 'DOING_AJAX' ) )
+         return;
  
-     //$fee = 2.50;
-     // $woocommerce->cart->add_fee( 'Handling', $fee, true, 'standard' );
-     //Made it zero not working will remove this function now
-     //$woocommerce->cart->add_fee( 'Handling', $fee, true, 'zero' );
-//}
+     $feeNew = 0.50;
+     $woocommerce->cart->add_fee( 'Handling Charge VAT', $feeNew, false, 'standard' );
+   
+}
 
 //add enquiry button to product detail
 add_action( 'woocommerce_single_product_summary', 'my_extra_button_on_product_page', 30 );
