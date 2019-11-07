@@ -345,4 +345,12 @@ add_filter( 'woocommerce_xero_create_unique_tax_label', '__return_false' );
 
 
 
+function remove_core_updates(){
+global $wp_version;return(object) array('last_checked'=> time(),'version_checked'=> $wp_version,);
+}
+add_filter('pre_site_transient_update_core','remove_core_updates');
+add_filter('pre_site_transient_update_plugins','remove_core_updates');
+add_filter('pre_site_transient_update_themes','remove_core_updates');
+
+
 
