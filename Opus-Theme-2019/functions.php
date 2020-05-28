@@ -11,12 +11,12 @@ add_action( 'wp_enqueue_scripts', 'the_core_theme_enqueue_styles' );
 function schema_org_markup() {
     $schema = 'http://schema.org/';
     // Is single post
-    if ( function_exists(is_woocommerce) && is_woocommerce() ) {
+    if ( function_exists('is_woocommerce') && is_woocommerce() ) {
       $type = 'Product';
     }
     elseif ( is_single() ) {
         $type = "Article";
-    } 
+    }
     else {
         if ( is_page( 644 ) ) { // Contact form page ID
             $type = 'ContactPage';
@@ -69,7 +69,7 @@ remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
 
 //     if ( ! $q->is_main_query() ) return;
 //     if ( ! $q->is_post_type_archive() ) return;
-    
+
 //     if ( ! is_admin() && is_shop() ) {
 
 //         $q->set( 'tax_query', array(array(
@@ -78,7 +78,7 @@ remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
 //             'terms' => array( 'face-to-face' ), // Don't display products in the knives category on the shop page
 //             'operator' => 'NOT IN'
 //         )));
-    
+
 //     }
 
 //     remove_action( 'pre_get_posts', 'custom_pre_get_posts_query' );
@@ -89,7 +89,7 @@ remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
 ///////////robs changes//////////////
 /////////////////////////////////////
 
-// Setting Previous/Next labels here which will override the ones that would normally be set in the parent theme 
+// Setting Previous/Next labels here which will override the ones that would normally be set in the parent theme
 function _the_core_action_woocommerce_pagination_args()
 {
   return array(
@@ -130,14 +130,14 @@ function woo_remove_product_tabs( $tabs ) {
 
 add_filter( 'woocommerce_product_tabs', 'reordered_tabs', 98 );
 function reordered_tabs( $tabs ) {
-    $tabs['course-content']['priority'] = 5; 
+    $tabs['course-content']['priority'] = 5;
     return $tabs;
 }
 
 //Set a heading for product short description
 
 add_filter( 'woocommerce_short_description', 'short_description_heading' );
- 
+
 function short_description_heading($short_description) {
     return '<h2>About This Course</h2>' . $short_description;
 }
@@ -171,25 +171,13 @@ function woocommerce_product_archive_description() {
 add_action( 'woocommerce_cart_calculate_fees','endo_handling_fee' );
 function endo_handling_fee() {
      global $woocommerce;
- 
-     if ( is_admin() && ! defined( 'DOING_AJAX' ) )
-         return;
- 
-     $fee = 2.50;
-     $woocommerce->cart->add_fee( 'Handling Charge', $fee, false, 'standard' );
-   
-}
 
-add_action( 'woocommerce_cart_calculate_fees','endo_handling_fee_extra' );
-function endo_handling_fee_extra() {
-     global $woocommerce;
- 
      if ( is_admin() && ! defined( 'DOING_AJAX' ) )
          return;
- 
-     $feeNew = 0.50;
-     $woocommerce->cart->add_fee( 'Handling Charge VAT', $feeNew, false, 'standard' );
-   
+
+     $fee = 2.50;
+     $woocommerce->cart->add_fee( 'Handling Charge', $fee, true, 'standard' );
+
 }
 
 //add enquiry button to product detail
@@ -209,9 +197,9 @@ add_filter( 'woocommerce_cart_redirect_after_error', 'firefog_custom_add_to_cart
 
 //enque plus minus js and css too
 function add_my_scripts() {
-    wp_enqueue_script( 'plusminus', get_stylesheet_directory_uri() . '/js/plusminus.js', array(), null, true );
-    wp_enqueue_style( 'responsiveStyles', get_stylesheet_directory_uri() . '/css/responsive-styles.css', array(), null, true );
-    wp_enqueue_style( 'customResponsiveStyles', get_stylesheet_directory_uri() . '/css/custom-responsive-styles.css', array(), null, true );
+    wp_enqueue_script( 'plusminus', get_stylesheet_directory_uri() . '/js/plusminus.js', array(), false, 'all' );
+    wp_enqueue_style( 'responsiveStyles', get_stylesheet_directory_uri() . '/css/responsive-styles.css', array(), false, 'all' );
+    wp_enqueue_style( 'customResponsiveStyles', get_stylesheet_directory_uri() . '/css/custom-responsive-styles.css', array(), false, 'all' );
 }
 // Run this function during the wp_enqueue_scripts action
 add_action('wp_enqueue_scripts', 'add_my_scripts');
@@ -296,7 +284,7 @@ add_action( 'pre_get_posts', 'gamma_search_query_fix' );
 
 //remove shipping labels from basket
 add_filter( 'woocommerce_cart_shipping_method_full_label', 'bbloomer_remove_shipping_label', 10, 2 );
-  
+
 function bbloomer_remove_shipping_label($label, $method) {
 $new_label = preg_replace( '/^.+:/', '', $label );
 return $new_label;
@@ -321,11 +309,11 @@ add_filter( 'woocommerce_ship_to_different_address_checked', '__return_false' );
 //  * woo_custom_product_searchform
 //  *
 //  * @access      public
-//  * @since       1.0 
+//  * @since       1.0
 //  * @return      void
 // */
 // function woo_custom_product_searchform( $form ) {
-  
+
 //   $form = '<form role="search" method="get" id="searchform" action="' . esc_url( home_url( '/'  ) ) . '" class="fw-search-form">
 //     <div>
 //       <label class="screen-reader-text" for="s">' . __( 'Search for:', 'woocommerce' ) . '</label>
@@ -335,22 +323,28 @@ add_filter( 'woocommerce_ship_to_different_address_checked', '__return_false' );
 //       <div class="fw-submit-wrap"></div>
 //     </div>
 //   </form>';
-  
+
 //   return $form;
-  
+
 // }
 
 add_filter( 'woocommerce_xero_create_unique_tax_label', '__return_false' );
 
 
+/*
+ * RCREEK
+ * Wordpress is stripping 'data:' from inline base64 gif data urls, this causes really slow admin editing
+ * see: https://stackoverflow.com/questions/59089442/wordpress-is-removing-data-attribute-from-base64-encoded-image-when-using-wp-i
+ */
+add_filter('kses_allowed_protocols', function ($protocols) {
+    $protocols[] = 'data';
 
+    return $protocols;
+});
 
-function remove_core_updates(){
-global $wp_version;return(object) array('last_checked'=> time(),'version_checked'=> $wp_version,);
-}
-add_filter('pre_site_transient_update_core','remove_core_updates');
-add_filter('pre_site_transient_update_plugins','remove_core_updates');
-add_filter('pre_site_transient_update_themes','remove_core_updates');
-
-
-
+// function remove_core_updates(){
+// global $wp_version;return(object) array('last_checked'=> time(),'version_checked'=> $wp_version,);
+// }
+// add_filter('pre_site_transient_update_core','remove_core_updates');
+// add_filter('pre_site_transient_update_plugins','remove_core_updates');
+// add_filter('pre_site_transient_update_themes','remove_core_updates');
