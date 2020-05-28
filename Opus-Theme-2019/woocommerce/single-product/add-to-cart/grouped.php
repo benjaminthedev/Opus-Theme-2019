@@ -69,16 +69,20 @@ $prod_types = $count_face_to_face == 2 ? count($sort_products) - 1 : count($sort
 				if ( is_face_to_face($product) && $first_face_to_face ) {
 						$first_face_to_face = false; ?>
 				<?php if ( $count > 1 ) echo ">" ?><div class="product-type cols-<?php echo $prod_types ?>">
-    					<h4>Face to Face</h4><!--rob-->
+    					<!-- <h4>Face to Face</h4> -->
+						<h4>Virtual Learning</h4>
+						
     					<!-- <p class="product-medium">At Your Venue</p> -->
-						<p class="product-medium">Virtual Learning </p>
-						<em>Pharmacist-led training via video conference</em>
+						<p class="product-medium"> Pharmacist-led training via video conference</p>
+
     					<!-- <p>Simply add to basket, provide your details and we will be in touch within 24 hours to finalise your booking and issue an invoice – book now, pay later!</p> -->
                         <!-- <p>Simply fill in our enquiry form by clicking below and we will get in touch within 24 hours to arrange a time and venue that suits you!</p> -->
 						<p>Simply fill out our enquiry form below and we will get in touch to arrange a date that suits you.</p>
-                        <!--rob-->
+                        
 				<?php } ?>
-				
+
+	
+
 				<?php if ( !is_face_to_face($product) ) { ?>
 				    <?php if ( $count > 1 ) echo ">" ?><div class="product-type cols-<?php echo $prod_types ?>">
 				        <?php if ( is_e_learning($product) ) { ?>
@@ -217,3 +221,19 @@ function opus_add_to_cart_text( $product ) {
 }
 
 ?>
+
+
+
+			<script>
+					//Remove this code when lockdown is over!
+
+
+					const currentTextText = document.querySelectorAll('.add-to-cart-container label');
+
+
+					currentTextText[0].innerHTML = 'virtual learning – UP TO 10 LEARNERS (COM REF)'
+					currentTextText[1].innerHTML = 'virtual learning – UP TO 16 LEARNERS (COM REF)'
+
+					
+				
+				</script>
