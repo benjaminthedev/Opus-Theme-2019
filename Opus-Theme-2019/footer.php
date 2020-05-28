@@ -13,11 +13,11 @@
 	</footer>
 
   <div class="downloadSection">
-    <a href="https://opuspharmserve.com/downloads/"><i class="fa fa-download" aria-hidden="true"></i> Click Here to Access Our Free Downloadable Resources </a> 
+    <a href="https://opuspharmserve.com/downloads/"><i class="fa fa-download" aria-hidden="true"></i> Click Here to Access Our Free Downloadable Resources </a>
 
 
     <!-- <a class="whitee" href="https://codeworxdigital.co.uk/" target="_blank">Digital Marketing Agency</a>		 -->
-	
+
 
   </div>
 </div><!-- /#page -->
@@ -47,10 +47,10 @@ $(function() {
     if ($("#pa_course-type option").filter(function(i, e) { return $(e).text() == "Face to Face"}).is(":selected")) {
       $("#bookNow").show();
       $(".single_add_to_cart_button").hide();
-	console.log('show unique button');  
+	console.log('show unique button');
     } else {
       $("#bookNow").hide();
-      $(".single_add_to_cart_button").show(); 
+      $(".single_add_to_cart_button").show();
     }
   }).trigger('change');
 });
@@ -64,13 +64,7 @@ $(function() {
 
 
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TLKRKK4');</script>
-<!-- End Google Tag Manager -->
+
 
 </body>
 </html>

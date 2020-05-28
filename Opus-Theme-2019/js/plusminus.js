@@ -1,18 +1,4 @@
 jQuery(document).ready(function ($) {
-    console.log("hello Working");
-
-    //Stupid Google ads
-
-
-
-
-
-
-    //New SSL
-
-
-
-
 
     $('.quantity').on('click', '.plus', function (e) {
         $input = $(this).prev('input.qty');
@@ -30,43 +16,27 @@ jQuery(document).ready(function ($) {
         });
 
 
+    //RCREEK - the following function breaks the unyson accordion functionality
+    // on every page of the website
+
     //Custom Function for scrolling on the home page:
-
-    $(function () {
-        $('a[href*=#]:not([href=#])').click(function () {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.substr(1) + ']');
-            if (target.length) {
-                $('html,body').animate({
-                    scrollTop: target.offset().top
-                }, 1000);
-                return false;
-            }
-        });
-    });
-
-
-    // New Downloadables Section
-
-
-    // .firstDownloadableBox,
-    // .secondDownloadableBox,
-    // .thirdDownloadableBox,
-    // .fourthDownloadableBox,
-    // .fifthDownloadableBox,
-    // .sixthDownloadableBox,
-    // .seventhDownloadableBox 
+    // $(function () {
+    //     $('a[href*=#]:not([href=#])').click(function () {
+    //         var target = $(this.hash);
+    //         target = target.length ? target : $('[name=' + this.hash.substr(1) + ']');
+    //         if (target.length) {
+    //             $('html,body').animate({
+    //                 scrollTop: target.offset().top
+    //             }, 1000);
+    //             return false;
+    //         }
+    //     });
+    // });
 
     $('.firstClickable').click(function () {
         $('.firstDownloadableBox').toggleClass("showDownloadLink");
-        console.log("Is working?");
+        //console.log("Is working?");
     });
-
-
-
-
-
-
 
     //Wrapping sections:
 
@@ -74,143 +44,8 @@ jQuery(document).ready(function ($) {
     // $( ".homeSectionTwo" ).wrapAll( "<div id='section2' />");
     $(".homeSectionThree").wrapAll("<div id='section3' />");
 
-    //New Section 
+    //New Section
     $(".newSectionFourTwo").wrapAll("<div id='section2' />");
-
-
-
-    //Removing of (MHM) etc in the products
-
-
-    //(MHM)
-    $('label:contains("(MHM)")').each(function () {
-        $(this).html($(this).html().split("(MHM)").join(""));
-    });
-    //(DIABETES)
-    $('label:contains("(Diabetes)")').each(function () {
-        $(this).html($(this).html().split("(Diabetes)").join(""));
-    });
-    //(SE I)
-    $('label:contains("(SE I)")').each(function () {
-        $(this).html($(this).html().split("(SE I)").join(""));
-    });
-    //(CD HRM)
-    $('label:contains("(CD HRM)")').each(function () {
-        $(this).html($(this).html().split("(CD HRM)").join(""));
-    });
-    //(MC Part 1)
-    $('label:contains("(MC Part 1)")').each(function () {
-        $(this).html($(this).html().split("(MC Part 1)").join(""));
-    });
-    //(MC Part 2)
-    $('label:contains("(MC Part 2)")').each(function () {
-        $(this).html($(this).html().split("(MC Part 2)").join(""));
-    });
-    //(Dementia)
-    $('label:contains("(Dementia)")').each(function () {
-        $(this).html($(this).html().split("(Dementia)").join(""));
-    });
-    //(Buccal)
-    $('label:contains("(Buccal)")').each(function () {
-        $(this).html($(this).html().split("(Buccal)").join(""));
-    });
-    //(SP Diabetes)
-    $('label:contains("(SP Diabetes)")').each(function () {
-        $(this).html($(this).html().split("(SP Diabetes)").join(""));
-    });
-    //(SP Asthma)
-    $('label:contains("(SP Asthma)")').each(function () {
-        $(this).html($(this).html().split("(SP Asthma)").join(""));
-    });
-    //(School Ref)
-    $('label:contains("(School Ref)")').each(function () {
-        $(this).html($(this).html().split("(School Ref)").join(""));
-    });
-    //(Nurse Ref)
-    $('label:contains("(Nurse Ref)")').each(function () {
-        $(this).html($(this).html().split("(Nurse Ref)").join(""));
-    });
-    //(Day Ref)
-    $('label:contains("(Day Ref)")').each(function () {
-        $(this).html($(this).html().split("(Day Ref)").join(""));
-    });
-    //(DOM Ref)
-    $('label:contains("(DOM Ref)")').each(function () {
-        $(this).html($(this).html().split("(DOM Ref)").join(""));
-    });
-    //(COM Ref)
-    $('label:contains("(COM Ref)")').each(function () {
-        $(this).html($(this).html().split("(COM Ref)").join(""));
-    });
-    //(Children Ref)
-    $('label:contains("(Children Ref)")').each(function () {
-        $(this).html($(this).html().split("(Children Ref)").join(""));
-    });
-    //(ECSL Ref)
-    $('label:contains("(ECSL Ref)")').each(function () {
-        $(this).html($(this).html().split("(ECSL Ref)").join(""));
-    });
-    //(MM FC)
-    $('label:contains("(MM FC)")').each(function () {
-        $(this).html($(this).html().split("(MM FC)").join(""));
-    });
-    //(Children F)
-    $('label:contains("(Children F)")').each(function () {
-        $(this).html($(this).html().split("(Children F)").join(""));
-    });
-    //(PA F)
-    $('label:contains("(PA F)")').each(function () {
-        $(this).html($(this).html().split("(PA F)").join(""));
-    });
-    //(Nurse F)
-    $('label:contains("(Nurse F)")').each(function () {
-        $(this).html($(this).html().split("(Nurse F)").join(""));
-    });
-    //(DOM F)
-    $('label:contains("(DOM F)")').each(function () {
-        $(this).html($(this).html().split("(DOM F)").join(""));
-    });
-    //(ECSL F)
-    $('label:contains("(ECSL F)")').each(function () {
-        $(this).html($(this).html().split("(ECSL F)").join(""));
-    });
-    //(Day F)
-    $('label:contains("(Day F)")').each(function () {
-        $(this).html($(this).html().split("(Day F)").join(""));
-    });
-    //(MA SL)
-    $('label:contains("(MA SL)")').each(function () {
-        $(this).html($(this).html().split("(MA SL)").join(""));
-    });
-    //(MA Foster)
-    $('label:contains("(MA Foster)")').each(function () {
-        $(this).html($(this).html().split("(MA Foster)").join(""));
-    });
-    //(School F)
-    $('label:contains("(School F)")').each(function () {
-        $(this).html($(this).html().split("(School F)").join(""));
-    });
-    //(COM F)
-    $('label:contains("(COM F)")').each(function () {
-        $(this).html($(this).html().split("(COM F)").join(""));
-    });
-
-    //General Face to Face
-    $('label:contains("Face to Face –")').each(function () {
-        $(this).html($(this).html().split("Face to Face –").join(""));
-    });
-
-
-
-    //About this course
-
-    //$('.single-product .woocommerce-product-details__short-description').insertBefore('.grouped-product-shizzle');
-
-
-
-
-
-
 
     //Button on the shop page for buy now:
 
@@ -220,14 +55,6 @@ jQuery(document).ready(function ($) {
 
     // $('a.button.product_type_grouped').html('Find Out More');
     $('a.button.product_type_grouped').html('Select Delivery Option');
-
-
-
-
-
-
-
-
 
     // FAQ boxes product pages
 
@@ -263,18 +90,10 @@ jQuery(document).ready(function ($) {
         $('.faqTab08box').toggleClass("showFAQBox");
     });
 
-
-
-
-    //New Section 
+    //New Section
     $(".pricing").wrapAll("<div class='section-three-information' />");
 
-
-
-
     // Single product page info
-
-
     $('li.courseInfo').click(function () {
         $(this).addClass("activedClass");
         $('li.accreditation, li.pricings').removeClass("activedClass");
@@ -303,45 +122,19 @@ jQuery(document).ready(function ($) {
 
         $(".additionalResourcesInfos").toggleClass("GoAway");
         $(".newborder").toggleClass("GoAway");
-
-
-
-
-
     });
 
     $(".pricing").append("<div class='additionalResourcesInfos2'>Remember to check out our <a href='https://opuspharmserve.com/downloads/' hidefocus='true' style='outline: none;'>free downloadable resources</a>.</div> <div class='newborder2'></div>");
-
-    // <div class='additionalResourcesInfos'>Remember to check out our <a href='https://opuspharmserve.com/downloads/' hidefocus='true' style='outline: none;'>free downloadable resources</a>.</div> <div class='newborder'></div>
-
-
-    // $("a.enquiresBtn").each(function(i) {
-    //      this.addClass("item"+(i+1));
-    // });
 
     $("a.enquiresBtn").each(function (i) {
         $("a.enquiresBtn").addClass("item" + (i + 1));
     });
 
-
-    // $('li').each(function(i) {
-    //     $(this).addClass("group-" + Math.floor(i/4 + 1));
-    // });
-
-
-
     //Single products layout
 
     $('.postid-7981 form.cart').insertAfter('.niceTitle');
 
-    // Addtional Edits
-
-    //$(".postid-7981 .woocommerce div.product form.cart").before(".niceTitle");
-
-
     //enquiries button to click to enquiries page
-
-
     //This is from individual product pages / the single product page
 
     $(" .postid-10418 .add-to-cart-container, .postid-10369 .add-to-cart-container, .postid-7954 .add-to-cart-container, .postid-7936 .add-to-cart-container, .postid-7929 .add-to-cart-container, .postid-7931 .add-to-cart-container, .postid-7940 .add-to-cart-container, .postid-7938 .add-to-cart-container, .postid-7933 .add-to-cart-container, .postid-7911 .add-to-cart-container, .postid-7927 .add-to-cart-container, .postid-7944 .add-to-cart-container, .postid-7948 .add-to-cart-container, .postid-9516 .add-to-cart-container, .postid-7942 .add-to-cart-container, .postid-7963 .add-to-cart-container, .postid-7979 .add-to-cart-container").after('<br /> <a href="https://opuspharmserve.com/enquiries/" class="newButtonClicked">Enquire Now</a>');
@@ -361,26 +154,5 @@ jQuery(document).ready(function ($) {
     This is for just the medicine magagemnt improvement workshop page as it is not working.
     */
 
-
-    //$('.postid-9516 .quantity, .postid-9616 .single_add_to_cart_button.button').hide();
-
-
-
     $("tr.shipping th").append(" and handling");
-
-    //$("tr.shipping th").insertAfter("<th>*A handling fee of £2.50 is applied to each order</th>");
-
-
-
-
-
 });
-
-
-
-
-//vanilla js
-
-// const cartItems = document.querySelectorAll('.woocommerce-checkout-review-order .cart_item');
-
-// console.log(cartItems);
