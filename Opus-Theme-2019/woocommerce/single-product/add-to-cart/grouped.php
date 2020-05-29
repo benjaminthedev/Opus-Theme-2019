@@ -77,7 +77,7 @@ $prod_types = $count_face_to_face == 2 ? count($sort_products) - 1 : count($sort
 
     					<!-- <p>Simply add to basket, provide your details and we will be in touch within 24 hours to finalise your booking and issue an invoice – book now, pay later!</p> -->
                         <!-- <p>Simply fill in our enquiry form by clicking below and we will get in touch within 24 hours to arrange a time and venue that suits you!</p> -->
-						<p>Simply fill out our enquiry form below and we will get in touch to arrange a date that suits you.</p>
+						<p>During the pandemic, our face to face training is now available as virtual learning. Simply fill out our enquiry form below and we will get in touch to arrange a date that suits you.</p>
                         
 				<?php } ?>
 
@@ -231,8 +231,8 @@ function opus_add_to_cart_text( $product ) {
 					const currentTextText = document.querySelectorAll('.add-to-cart-container label');
 
 
-					currentTextText[0].innerHTML = 'virtual learning – UP TO 10 LEARNERS (COM REF)'
-					currentTextText[1].innerHTML = 'virtual learning – UP TO 16 LEARNERS (COM REF)'
+					currentTextText[0].innerHTML = 'virtual learning – UP TO 10 LEARNERS '
+					currentTextText[1].innerHTML = 'virtual learning – UP TO 16 LEARNERS '
 
 					
 				
