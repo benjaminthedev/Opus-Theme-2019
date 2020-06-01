@@ -3320,7 +3320,8 @@ span.woocommerce-advanced-product-label.product-label.label-red {
 .postid-7938 div.title-container,
 .postid-7913 div.title-container,
 .postid-7901 div.title-container,
-.postid-9354 div.title-container {
+.postid-9354 div.title-container,
+.postid-21069 div.title-container {
     background-color: #00BCD4 !important;
 }
 
@@ -3333,7 +3334,11 @@ span.woocommerce-advanced-product-label.product-label.label-red {
 .postid-7917 div.title-container,
 .postid-7903 div.title-container,
 .postid-7674 div.title-container,
-.postid-9352 div.title-container {
+.postid-9352 div.title-container{
+    background-color: #8BC34A !important;
+}
+
+.postid-21036 div.title-container{
     background-color: #8BC34A !important;
 }
 
