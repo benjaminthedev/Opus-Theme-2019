@@ -13,7 +13,7 @@
 	</footer>
 
   <div class="downloadSection">
-    <a href="https://opuspharmserve.com/downloads/"><i class="fa fa-download" aria-hidden="true"></i> Click Here to Access Our Free Downloadable Resources </a>
+    <a href="https://opuspharmserve.com/downloads/" class="footer-download-link" title="Click Here to Access Our Free Downloadable Resources"><i class="fa fa-download" style="color: white;" aria-hidden="true"></i> <span class="downloadable-intro-text">Click Here to Access Our Free</span> Downloadable Resources </a>
 
 
     <!-- <a class="whitee" href="https://codeworxdigital.co.uk/" target="_blank">Digital Marketing Agency</a>		 -->

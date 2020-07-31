@@ -227,12 +227,42 @@ function opus_add_to_cart_text( $product ) {
 			<script>
 					//Remove this code when lockdown is over!
 
-
+					
+					//This works when there is two of the products
 					const currentTextText = document.querySelectorAll('.add-to-cart-container label');
+					console.log(currentTextText[0].innerText);
+					// currentTextText[0].innerHTML = 'virtual learning – UP TO 10 LEARNERS '
+					// currentTextText[1].innerHTML = 'virtual learning – UP TO 16 LEARNERS '
+
+					const p1 = currentTextText[0].innerText;
+					console.log(p1);
+
+					const stripped = p1.replace(/FACE TO FACE/g, 'virtual learning')
+					console.log(stripped);
+
+					currentTextText[0].innerText = stripped;
+					console.log(currentTextText[0].innerText);
 
 
-					currentTextText[0].innerHTML = 'virtual learning – UP TO 10 LEARNERS '
-					currentTextText[1].innerHTML = 'virtual learning – UP TO 16 LEARNERS '
+
+
+					const p2 = currentTextText[1].innerText;
+					console.log(p2);
+
+					const stripped2 = p2.replace(/FACE TO FACE/g, 'virtual learning')
+					console.log(stripped);
+
+					currentTextText[1].innerText = stripped2;
+					console.log(currentTextText[1].innerText);
+
+
+
+
+
+					
+		
+
+
 
 					
 				

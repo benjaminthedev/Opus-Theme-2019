@@ -3,7 +3,7 @@
 }
 
 function the_core_theme_enqueue_styles() {
-    wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+    wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css', array(), 'v20200727143900' );
 }
 
 add_action( 'wp_enqueue_scripts', 'the_core_theme_enqueue_styles' );
@@ -198,8 +198,8 @@ add_filter( 'woocommerce_cart_redirect_after_error', 'firefog_custom_add_to_cart
 //enque plus minus js and css too
 function add_my_scripts() {
     wp_enqueue_script( 'plusminus', get_stylesheet_directory_uri() . '/js/plusminus.js', array(), false, 'all' );
-    wp_enqueue_style( 'responsiveStyles', get_stylesheet_directory_uri() . '/css/responsive-styles.css', array(), false, 'all' );
-    wp_enqueue_style( 'customResponsiveStyles', get_stylesheet_directory_uri() . '/css/custom-responsive-styles.css', array(), false, 'all' );
+    wp_enqueue_style( 'responsiveStyles', get_stylesheet_directory_uri() . '/css/responsive-styles.css', array(), 'v20200727143900', 'all' );
+    wp_enqueue_style( 'customResponsiveStyles', get_stylesheet_directory_uri() . '/css/custom-responsive-styles.css', array(), 'v20200727143900', 'all' );
 }
 // Run this function during the wp_enqueue_scripts action
 add_action('wp_enqueue_scripts', 'add_my_scripts');
