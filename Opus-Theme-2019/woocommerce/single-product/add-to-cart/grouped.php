@@ -225,67 +225,25 @@ function opus_add_to_cart_text( $product ) {
 
 
 			<script>
-					//Remove this code when lockdown is over!
+					//Remove this code when lockdown is over!  When ever LOCKDOWN is over..... 
 
 					
 					//This works when there is two of the products
 					const currentTextText = document.querySelectorAll('.add-to-cart-container label');
 
-					// Convert buttons NodeList to an array
+					// Convert text NodeList to an array
 					const textArr = Array.from(currentTextText);
 
+					//Then for each change the text
 					textArr.forEach(element => {
-
+						//Get each element innerText
 						const theText = element.innerText;
+						//Logging out the text befor the chanhe
 						console.log(`this is the text before: ${theText}`);
-
+						//Finding the text with Face to Face and replacing it with virtual learning
 						const stripped = theText.replace(/FACE TO FACE/g, 'virtual learning');
-
+						//Assigning the new text to the innerText of the element. 
 						element.innerText = stripped;
-
-					});
-
-					
-					// const new = currentTextText.map(function(text){
-					// 		console.log(text);
-					// })
-					
-					
-					
-					console.log(currentTextText[0].innerText);
-					// currentTextText[0].innerHTML = 'virtual learning – UP TO 10 LEARNERS '
-					// currentTextText[1].innerHTML = 'virtual learning – UP TO 16 LEARNERS '
-
-					// const p1 = currentTextText[0].innerText;
-					// console.log(p1);
-
-					// const stripped = p1.replace(/FACE TO FACE/g, 'virtual learning');
-					// console.log(stripped);
-
-					// currentTextText[0].innerText = stripped;
-					// console.log(currentTextText[0].innerText);
-
-
-
-
-					// const p2 = currentTextText[1].innerText;
-					// console.log(p2);
-
-					// const stripped2 = p2.replace(/FACE TO FACE/g, 'virtual learning')
-					// console.log(stripped);
-
-					// currentTextText[1].innerText = stripped2;
-					// console.log(currentTextText[1].innerText);
-
-
-
-
-
-					
-		
-
-
-
-					
-				
+						//Done!
+					});	
 				</script>
