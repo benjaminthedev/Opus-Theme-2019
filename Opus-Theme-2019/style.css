@@ -1619,9 +1619,6 @@ select {
     margin-bottom: 40px;
 }
 
-.button {
-}
-
 .woocommerce a.button,
 .single_add_to_cart_button,
 .woocommerce button.button.alt {
@@ -3292,7 +3289,11 @@ span.woocommerce-advanced-product-label.product-label.label-red {
 .postid-9515 div.title-container,
 .postid-10353 div.title-container,
 .postid-10354 div.title-container,
-.postid-11834 div.title-container {
+.postid-11834 div.title-container{
+    background-color: #ea8785 !important;
+}
+
+.postid-21281 .woocommerce div.product div.title-container{
     background-color: #ea8785 !important;
 }
 
