@@ -222,12 +222,9 @@ function opus_add_to_cart_text( $product ) {
 
 ?>
 
-
-
 			<script>
 					//Remove this code when lockdown is over!  When ever LOCKDOWN is over..... 
 
-					
 					//This works when there is two of the products
 					const currentTextText = document.querySelectorAll('.add-to-cart-container label');
 
