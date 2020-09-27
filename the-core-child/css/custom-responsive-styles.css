@@ -1,0 +1,114 @@
+/************************************
+All Custom Responsive Styles
+*************************************/
+
+
+/************************************
+Mobiles
+*************************************/
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    .page-id-6147 .otherCoursesSection li.globalListProduct,
+    .page-id-7444 .otherCoursesSection li.globalListProduct,
+    .page-id-7453 .otherCoursesSection li.globalListProduct,
+    .page-id-7460 .otherCoursesSection li.globalListProduct,
+    .page-id-7733 .otherCoursesSection li.globalListProduct,
+    .page-id-7770 .otherCoursesSection li.globalListProduct,
+    .page-id-7777 .otherCoursesSection li.globalListProduct,
+    .page-id-7782 .otherCoursesSection li.globalListProduct,
+    .page-id-7789 .otherCoursesSection li.globalListProduct,
+    .page-id-7801 .otherCoursesSection li.globalListProduct,
+    .page-id-7806 .otherCoursesSection li.globalListProduct,
+    .page-id-7759 .otherCoursesSection li.globalListProduct {
+        /*width: 32%;*/
+        width: 44%;
+        float: left;
+        margin: 10px;
+        min-height: 390px;
+        margin-bottom: 30px;
+    }
+
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767px) {
+
+    .page-id-6147 .otherCoursesSection li.globalListProduct,
+    .page-id-7444 .otherCoursesSection li.globalListProduct,
+    .page-id-7453 .otherCoursesSection li.globalListProduct,
+    .page-id-7460 .otherCoursesSection li.globalListProduct,
+    .page-id-7733 .otherCoursesSection li.globalListProduct,
+    .page-id-7770 .otherCoursesSection li.globalListProduct,
+    .page-id-7777 .otherCoursesSection li.globalListProduct,
+    .page-id-7782 .otherCoursesSection li.globalListProduct,
+    .page-id-7789 .otherCoursesSection li.globalListProduct,
+    .page-id-7801 .otherCoursesSection li.globalListProduct,
+    .page-id-7806 .otherCoursesSection li.globalListProduct,
+    .page-id-7759 .otherCoursesSection li.globalListProduct {
+        /*width: 32%;*/
+        width: 44%;
+        float: left;
+        margin: 10px;
+        min-height: 390px;
+        margin-bottom: 30px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+    .page-id-6147 .otherCoursesSection li.globalListProduct,
+    .page-id-7444 .otherCoursesSection li.globalListProduct,
+    .page-id-7453 .otherCoursesSection li.globalListProduct,
+    .page-id-7460 .otherCoursesSection li.globalListProduct,
+    .page-id-7733 .otherCoursesSection li.globalListProduct,
+    .page-id-7770 .otherCoursesSection li.globalListProduct,
+    .page-id-7777 .otherCoursesSection li.globalListProduct,
+    .page-id-7782 .otherCoursesSection li.globalListProduct,
+    .page-id-7789 .otherCoursesSection li.globalListProduct,
+    .page-id-7801 .otherCoursesSection li.globalListProduct,
+    .page-id-7806 .otherCoursesSection li.globalListProduct,
+    .page-id-7759 .otherCoursesSection li.globalListProduct {
+        /*width: 32%;*/
+        width: 44%;
+        float: left;
+        margin: 10px;
+        min-height: 390px;
+        margin-bottom: 30px;
+    }
+
+    .fw-footer-widgets {
+        background-color: blue !important;
+    }
+
+}
+
+/************************************
+All Custom Table Responsive Styles
+*************************************/
+
+
+/************************************
+Custom Reponsive Styles Continued
+*************************************/
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .fw-footer-widgets {
+        background-color: pink !important;
+    }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    body {
+        background-color: purple !important;
+    }
+}
+
+
+
